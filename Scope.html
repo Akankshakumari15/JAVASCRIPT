@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        // scope:: distance of any variable declared , till where it can be accessed.
+
+        // let and const keywords are block scope,they cannot be accessed outside their block.
+        {
+            let a=10;
+            console.log(a);
+        }                     //block
+            console.log(a);   //here a is not accessible
+           
+         
+       // var can be accessed from anywhere, i.e functional scope.
+            var p =10;
+            {
+                var p = 40;
+            }
+            console.log(p);
+           
+
+            function print(){
+                var q=6;
+            }
+            console.log(q)   //will not display value of q, as function was never called.
+    </script>
+</body>
+</html>
