@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sum=()=>{
+            console.log("hii");
+         }
+         sum()
+        //in global execution context,
+        //  in memory execution phase, sum will be assigned undefined.
+        //  but in code execution phase, sum will be assigned its body value that is code will run 
+        // and display the value of function sum 
+
+        var a=5;
+        var a=()=>{
+           console.log("byee")
+        }
+        a()  // will display bye as var can be redeclared.
+
+        let  b=5;
+         b=()=>{
+           console.log("byeeee")
+        }
+        b()   //will display bye as let can be reassinged but not redeclared
+    </script>
+</body>
+</html>
