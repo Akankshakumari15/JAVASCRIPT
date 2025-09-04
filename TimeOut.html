@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // setTimeout print only one time after time complete
+        // setTimeout(()=>{
+        //     console.log("hello");
+            
+        // },3000)
+
+        // //  setInterval print after complete time again and again
+        //  setInterval(()=>{
+        //     console.log("hello");
+            
+        // },1000)
+         
+        //  let and const is function scope
+    //     for(let i=0;i<5;i++){
+    //      setTimeout(()=>{
+    //        console.log(i);     
+    //     },1000*i)
+    //    }
+
+    //    var is block scope
+        for(var i=0;i<5;i++){
+         setTimeout(()=>{
+           console.log(i);     
+        },1000*i)
+    }
+    </script>
+</body>
+</html>
