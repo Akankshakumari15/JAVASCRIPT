@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Higher order Function(HOF)
+       
+        //Any function that returns a functions, are called higher order functions.
+        function outer(){
+            function inner(){
+                console.log("inner")
+            }
+            return inner
+        }
+        let q=outer()
+        q()
+        
+        //Any function passing a function in its argument, is also called a higher order function.
+        function out(u){
+        u()
+        }
+        function inn(){
+             console.log("hiii")
+        }
+        out(inn)   //higher order function(outer)
+                  //here, inn function is being passed as argument in out function.
+    </script>
+</body>
+</html>
