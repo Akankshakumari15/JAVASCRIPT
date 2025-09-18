@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="one" class="two">hello</h1>
+    <h1 id="one" class="two">hello</h1>
+    <p>hi</p>
+    <a href="http://google.com">Google</a>
+    <script>
+        // DOM :: document object model
+        // the html and css files are also converted into a javascript object.
+
+        console.log(document);  //the term is used to manipulate the file
+
+        // selectors::to get a particular Element
+        //id selector
+        // let h1 = document.getElementById("one");
+        // console.log(h1)
+        // h1.style.color = 'red';
+
+        //classs selector
+        // let h2 = document.getElementsByClassName("two");
+        // console.log(h2)
+        // h2[0].style.color= 'pink'    //specify index
+        // h2[1].style.color= 'pink'
+
+
+        //query selector::can select any element with id or class too
+        // let h3 = document.querySelector("#one")
+        // console.log(h3.innerText);
+        //  h3.innerText= 'byee'  //to change text 
+
+
+        // let h4 = document.querySelector(".two")
+        // console.log(h4);
+
+        //query selector all::selects all id and classes
+        // let h5 = document.querySelectorAll("#one")
+
+
+
+        // let h7 = document.querySelectorAll(".two")
+        // console.log(h7);
+
+        //get element by tag name selector
+        // let h6 = document.getElementsByTagName("p")
+
+        //attribute selector
+        let a=document.querySelector('a')
+        // var i = a.getAttribute("href")
+        var i=a.setAttribute('href','https://flipkart.com')      //to change a attribute
+        console.log(i)
+
+
+
+    </script>
+</body>
+
+</html>
