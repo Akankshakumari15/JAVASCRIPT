@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+
+    <!-- Hoisting takes place only in case of ulta-pulta declaration -->
+    <script>
+        //the value of "a" will be accessed in this manner. 
+        console.log(a);
+         var a=5=>>>
+         var a
+         console.log(a);
+         a=5;
+
+
+         //the value of "a" cannot be accessed by hoisting in case of declaration using let and const
+         console.log(a);
+         let a=5;
+
+         
+         
+        
+        
+    </script>
+</body>
+</html>
