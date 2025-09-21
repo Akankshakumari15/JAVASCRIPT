@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- onsubmit event:: submits all data of form in inputed -->
+    <form action="">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">First Name:</label>
+            <input id="name" type="text"><br><br>
+
+            <label for="name">Last Name:</label>
+            <input id="name" type="text"><br><br>
+
+            <label for="dob">Date Of Birth:</label>
+            <input id="dob" type="date"><br><br>
+
+            <label for="email">Email id:</label>
+            <input id="email" type="email"><br><br>
+
+            <label for="gender">Gender:</label>
+            <input id="gender" type="radio" name="hello">
+            <span>Male</span>
+            <input id="gender" type="radio" name="hello">
+            <span>Female</span>
+            <input id="gender" type="radio" name="hello">
+            <span>Other</span><br><br>
+
+            <button type="submit"> Submit</button>
+        </fieldset>
+    </form>
+
+    <script>
+         let formElement= document.querySelector("form")
+         formElement.addEventListener("submit",(e)=>{
+            e.preventDefault()               //to prevent default or the refresh
+           console.log(formElement[1].value); 
+           console.log(formElement[2].value);
+           console.log(formElement[4].value);
+            
+         })
+
+         localStorage.setItem("key","data")
+
+         localStorage.getItem("key","data")
+    </script>
+</body>
+
+</html>
