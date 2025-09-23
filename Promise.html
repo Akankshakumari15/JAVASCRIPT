@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let step1 = function () {
+            return new Promise((res, rej) => {
+                setTimeout(() => {
+                    res()
+                    console.log("photo select ho gayi");
+
+                }, 4000)
+            })
+        }
+        let step2 = function () {
+            return new Promise((res, rej) => {
+                setTimeout(() => {
+                    res()
+                    console.log("captions");
+
+                }, 2000)
+            })
+        }
+        let step3 = function () {
+            return new Promise((res, rej) => {
+                setTimeout(() => {
+                    res()
+                    console.log("filter");
+
+                }, 2000)
+            })
+        }
+        // step1().then(()=>{
+        //     return step2.then(()=>{
+        //      return step2.then(()=>{
+
+        //     })
+        //      })
+        // })
+
+        async function call() {
+            await step1()
+            console.log("hii");
+            await step2()
+
+            await step3()
+        }
+        call()
+    </script>
+</body>
+
+</html>
