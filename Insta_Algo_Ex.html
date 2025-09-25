@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // the solution is called callback hell.
+        //insta algo
+        //step 1::select photo
+        //step 2::add caption
+        //step 3::add music
+        //step 4::post photo
+
+        function step1(fn) {
+            setTimeout(() => {
+                console.log("photo selected.");
+                fn()
+            }, 5000)
+        }
+        function step2(xn) {
+            setTimeout(() => {
+                console.log("caption added.");
+                 xn()
+            }, 2000)
+        }
+        function step3(pn) {
+            setTimeout(() => {
+                console.log("music added.");
+                pn()
+            }, 3000)
+        }
+        function step4() {
+            setTimeout(() => {
+                console.log("photo posted.");
+
+            }, 1000)
+        }
+        
+        //calling the functions like this is a problem as the code runs line by line that ens up with posting the photo first and then selection.
+        //we can solve this problem using callback.
+
+        // wrong way:: our code needs to be step dependent and not time dependent.
+        // step1()
+        // step2()
+        // step3()
+        // step4()
+
+        //correct way::step dependent and time dependent
+        step1(()=>{
+            step2(()=>{
+                step3(()=>{
+                    step4()
+                })
+            })
+        })
+
+
+
+        //solution::
+        // function minus() {
+        //     console.log("hiii");
+
+        // }
+        // function sum(fn) {
+        //     console.log("hello");
+        //     fn()
+        // }
+        
+        // sum(()=>{
+        //     minus()
+        // })      //callback function
+
+
+
+    </script>
+</body>
+
+</html>
