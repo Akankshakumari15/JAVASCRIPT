@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Prototype::hidden properties
+        let obj = {
+            id: 3,
+            name: "hii",
+            age: 23
+        }
+        console.log(obj.id)          //3
+        console.log(obj.toString())  //object Object
+        console.log(obj.id.toString())   //object prototype
+
+        let arr = [1, 2, 3, 4]
+        console.log(arr)              //print array
+        console.log(arr.toString)    //finds the toString in object prototype
+        //levels of checking :: array, array prototype, object prototype, null
+
+        console.log(Array.prototype)    //hidden properties of array
+
+
+        
+    </script>
+</body>
+
+</html>
