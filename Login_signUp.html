@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+        <fieldset>
+            <legend>SIGN UP</legend>
+             <form id="form1">
+            <label for="firstname">First Name:</label>
+            <input id="firstname" type="text"><br><br>
+
+            <label for="name">Last Name:</label>
+            <input id="name" type="text"><br><br>
+
+            <label for="dob">Date Of Birth:</label>
+            <input id="dob" type="date"><br><br>
+
+            <label for="email">Email id:</label>
+            <input id="email" type="email"><br><br>
+
+            <label for="password">Password:</label>
+            <input id="password" type="password"><br><br>
+
+          
+
+            <button type="submit"> Sign Up</button><br><br>
+        </form>
+        </fieldset>
+    <br><br><br>
+    <fieldset>
+        <legend>LOGIN</legend>
+    <form id="form2" action="">
+
+            <label for="email1">Email id:</label>
+            <input id="email1" type="email"><br><br>
+
+            <label for="password1">Password:</label>
+            <input id="password1" type="password"><br><br>
+
+             <button type="submit"> Login</button><br><br>
+        </form>
+    </fieldset>
+
+    <script>
+        let formEle=document.querySelector("form")
+        formEle.addEventListener("submit", (e) => {
+            e.preventDefault();
+            data = {
+                firstName: formEle[0].value,
+                lastName: formEle[1].value,
+                email: formEle[3].value,
+                password: formEle[4].value
+            }
+
+            localStorage.setItem("signUp", JSON.stringify(data));
+            console.log(localStorage.getItem("signUp"));
+        });
+
+let loginF=document.querySelector("#form2")
+ loginF.addEventListener("submit", (e) => {
+           let currEmail=loginF[0].value
+           console.log(currEmail);
+           
+ })
+    </script>
+</body>
+
+</html>
