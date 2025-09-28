@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //synchronous::works line by line
+        //asynchronous:: does not work in sync, in coding asynchronous is much better
+        //a browser consists of call stack, a web API and event loop.
+        //all print statements with any setTimeout or setInterval, will never be directly put in the call stack.
+        //a print without any time set or interval will be run first.
+
+        setTimeout(() => {
+            console.log("c");
+        }, 1000)
+        setTimeout(() => {
+            console.log("d");
+        }, 0)
+        setTimeout(() => {
+            console.log("a");
+        }, 3000)
+        
+        console.log("b");    // b, d, c, a
+
+        //insta algo
+        //step 1::select photo
+        //step 2::add caption
+        //step 3::add music
+        //step 4::post photo
+
+        function step1(){
+            setTimeout(()=>{
+                console.log("photo selected.");
+                
+            },5000)
+        }
+            function step2(){
+            setTimeout(()=>{
+                console.log("caption added.");
+                
+            },2000)
+        }
+ function step3(){
+            setTimeout(()=>{
+                console.log("music added.");
+                
+            },3000)
+        }
+         function step4(){
+            setTimeout(()=>{
+                console.log("photo posted.");
+                
+            },1000)
+        }
+
+        step1()
+        step2()
+        step3()
+        step4()
+
+
+    </script>
+</body>
+
+</html>
