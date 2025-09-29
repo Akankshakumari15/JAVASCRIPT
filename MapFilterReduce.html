@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr =[1,2,3,4,5,64,3,5,2,5,2,34]
+        // let sum = arr.reduce((a,b,c,d)=>{
+        //     return a+b;
+        //     })
+        //     console.log(sum);
+
+       let greaterthan2=arr.filter((a,b,c)=>{
+         return a%2==0;
+         
+       })
+       console.log(greaterthan2);
+        let sum = greaterthan2.reduce((a,b,c,d)=>{
+            return a+b;
+            })
+            console.log(sum);
+        
+        //if subtraction is negative, already sorted 
+        //if positive ,greater number is on left side
+        //if 0 , no need to do anything
+        //ascending order
+            let sorted1 =arr.sort((a,b,c)=>{
+            return a-b;
+        })
+        console.log(sorted1);
+
+
+        //descending order
+        let sorted2 =arr.sort((a,b,c)=>{
+            return b-a;
+        })
+        console.log(sorted2);
+
+
+
+        //function inside an object
+        let obj={
+            id:1,
+            name:"akanksha",
+            subb: function(){
+                console.log("hiiii")
+            }
+     }
+       obj.subb()
+       console.log(obj.id);
+       console.log(obj.name);
+       
+    //   a=initial value of array
+    </script>
+</body>
+</html>
+
+<!-- GEC= global execution context -->
+<!-- in javascript, code runs line by line -->
