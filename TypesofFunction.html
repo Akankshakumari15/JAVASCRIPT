@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypesOfFunction</title>
+</head>
+<body>
+    <script>
+        //function expression
+        //pure function::functions that are called any no. of times, but display same output.
+        console.log("Pure function")
+        function print(){
+            console.log("hiii")
+        }
+        print()
+        print()
+        
+
+        //impure function::functions when called multiple times, give different outputs everytime.
+        console.log("Impure function")
+        let a=5
+        function sum(){
+            a+=5
+            return a
+        }
+        console.log(sum())
+        console.log(sum())
+        console.log(sum())
+        
+        //Array Functions
+        let arr=[1,2,3,4,5,7,44]
+        arr.push(11);         //add data from last of array
+        console.log(arr);
+        arr.unshift(101);     //add data from start of array
+        console.log(arr);
+        arr.shift();          //deletes first element of array
+        console.log(arr);
+        arr.pop();            //deletes last element of array
+        console.log(arr);
+        
+
+        //typeof::tells the data type of function
+        console.log(typeof(5))         
+        console.log(typeof("a"))
+        console.log(typeof("hii"))
+        console.log(typeof(true))
+
+        //the return type of typeof is string
+        console.log(typeof(typeof(true)))
+        console.log(typeof(typeof(5)))
+
+        //differentiate array into arrays based on their data type
+        const array=[2,'hello',true]
+        const arr1=array.filter(element => typeof element==='number');
+        console.log(arr1);
+        const arr2=array.filter(element => typeof element==='string');
+        console.log(arr2);
+        const arr3=array.filter(element => typeof element==='boolean');
+        console.log(arr3);
+
+        
+function getString(i){
+            return typeof i =="string"
+         }
+          function getNumber(i){
+            return typeof i =="number"
+         }
+           function getBoolean(i){
+            return typeof i =="boolean"
+         }
+         function getfun(arr1,fn){
+            let res=[]
+            for(i of arr1){
+                if(fn(i)){
+                   res.push(i)
+                }
+            }
+            return res
+        }
+        console.log(getfun(arr1,getString));
+        console.log(getfun(arr1,getNumber));
+        console.log(getfun(arr1,getBoolean));
+        
+        
+    </script>
+</body>
+</html>
