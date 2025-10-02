@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var is depended on any scope
+        //let is a block scope
+        {
+            var a=5;
+        }
+        {
+            var a=6;
+            console.log(a);
+        }
+
+    //     for(let i=1;i<=5;i++){
+    //      setTimeout(()=>{          //gives a delay to the system
+    //        console.log(i);     
+    //     },1000*i)
+    //    }
+
+       console.log(window)  //window:: global object
+
+       console.log(this)    //if there is no object, it will always refer to the window.
+
+       
+       //"this" keyword
+       let obj={
+        id:1,
+        name:"hello",
+       sum:function(){         //method
+        console.log(this.id)  //here, it will point to the object created
+        console.log(this.name)
+       }
+       }
+       obj.sum()               //method is called with the object
+
+       
+       a=8
+       console.log(window)
+       console.log(a)       //undeclared "a" gets attached to window/object
+       
+
+       //this always refers to the parent's object.
+       let object={
+           id:3,
+           name:"hii",
+        //    sub: () =>{
+        //     console.log(this) //this keyword does not work in arrow function.
+        //    }
+           sub :function(){
+             console.log(this.id)
+             console.log(this.name)
+             
+           }
+       }
+       object.sub()
+    </script>
+</body>
+</html>
