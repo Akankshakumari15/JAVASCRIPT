@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- onclick function -->
+    <!-- <button onclick="fun()">click</button> -->
+    <!-- <button>click</button> -->
+    <input type="text">
+    <h2></h2>
+
+    <script>
+        //ways to implement events::onclick(), 
+        // onchange() = changes in input field
+
+        //first way
+        //  function fun(){
+        //     console.log("hello");
+
+        //  }
+
+        //second way
+        // let btn = document.querySelector("button")
+        // let body = document.querySelector("body")
+        // btn = onclick = function () {
+        //     console.log("hello");
+        //     body.style.backgroundColor = "red"
+
+        // }
+
+        //third way
+        // btn.addEventListener("click", () => {
+        //     body.style.backgroundColor = "skyblue"
+        // })
+
+
+
+        //onchange event
+        let inp = document.querySelector("input")
+        let h2 = document.querySelector("h2")
+        inp.addEventListener("input", (e) => {
+            console.log("hello");
+            console.log(e.target.value);   //to get what is typed in the console
+            console.log(e.target);         //event is called for every alphabet u type
+            h2.innerText = e.target.value   
+        })
+
+    </script>
+</body>
+
+</html>
