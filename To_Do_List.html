@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        /* background-image: url("image.png"); */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+
+    .box {
+        width: 100%;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #153677, #4e085f);
+        padding: 10px;
+    }
+
+    .todo-app {
+        width: 100%;
+        max-width: 540px;
+        background: #fff;
+        margin: 100px auto 20px;
+     padding: 20px 30px 70px;
+     border-radius: 10px;
+    }
+
+    fieldset {
+        background-color: palevioletred;
+
+        height: 600px;
+        border: 7px solid black;
+        border-radius: 15px;
+    }
+
+    button {
+        background-color: black;
+        color: wheat;
+    }
+
+    input {
+        height: 25px;
+        border: 4px solid black;
+    }
+
+    #delete {
+        background-color: black;
+        color: wheat;
+    }
+
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #002765;
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+
+    <div class="box">
+
+        <div class="todo-app">
+            <h1><b><u><i>TO-DO LIST</i></u></b></h1>
+            <!-- <fieldset> -->
+                <div ></div>
+                <input type="text" name="" id="">
+                <button> <b>ADD</b></button>
+                <button id="delete"> <b>DELETE</b></button>
+                <ul> </ul>
+            <!-- </fieldset> -->
+        </div>
+    </div>
+
+    <script>
+        let inp = document.querySelector("input")
+        let btn = document.querySelector("button")
+        let ulTag = document.querySelector("ul")
+        let delBtn = document.querySelector("#delete")
+        btn.addEventListener("click", () => {
+            // console.log("hello");
+            let data = inp.value
+            let li = document.createElement("li") //create li tag
+            li.innerText = data
+            li.style.color = 'white'
+            ulTag.append(li)
+            inp.value = " "
+            li.addEventListener("click", () => {
+                li.remove()
+            })
+        })
+        delBtn.addEventListener("click", () => {
+            ulTag.remove()
+        })
+
+
+    </script>
+</body>
+
+</html>
